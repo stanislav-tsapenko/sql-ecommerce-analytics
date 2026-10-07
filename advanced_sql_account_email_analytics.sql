@@ -1,4 +1,4 @@
--- final_task_sql_advanced.sql
+-- advanced_sql_account_email_analytics.sql
 -- Запит: збір інформації по акаунтах та email-метриках, ранжування ТОП-країн
 WITH
   -- CTE: інформація по акаунтам
