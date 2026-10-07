@@ -22,7 +22,7 @@
 ## ▶️ Як запустити
 1. Відкрити [Google BigQuery Console](https://console.cloud.google.com/bigquery).  
 2. Створити новий запит.  
-3. Скопіювати вміст з `final_task_sql_advanced.sql`.  
+3. Скопіювати вміст з `advanced_sql_account_email_analytics.sql`.  
 4. Запустити (`Run`).  
 
 ## 📊 Результат
