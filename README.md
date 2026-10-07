@@ -1,4 +1,4 @@
-# advanced_sql_account_email_analytics.sql
+# Advanced SQL Project: Global Account and Email Analytics
 
 ## 📌 Опис
 Цей проєкт містить SQL-запит для збору та аналізу даних по акаунтах і email-активності користувачів.  
