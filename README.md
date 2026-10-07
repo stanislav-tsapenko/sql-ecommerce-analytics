@@ -5,7 +5,7 @@
 Запит ранжує країни за кількістю акаунтів та відправлених листів і відбирає **ТОП-10 країн** по кожному з критеріїв.
 
 ## 📂 Структура репозиторію
-- `Advanced SQL Project: Global Account and Email Analytics.sql` — основний SQL-запит  
+- `advanced_sql_account_email_analytics.sql` — основний SQL-запит  
 - `README.md` — документація (цей файл)    
 - `screenshots_query-results.png` — скріншоти з BigQuery  
 
