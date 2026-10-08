@@ -1,34 +1,41 @@
 # Advanced SQL Project: Global Account and Email Analytics
 
-## 📌 Опис
-Цей проєкт містить SQL-запит для збору та аналізу даних по акаунтах і email-активності користувачів.  
-Запит ранжує країни за кількістю акаунтів та відправлених листів і відбирає **ТОП-10 країн** по кожному з критеріїв.
+## 📌 Description
+This project contains a SQL query that collects and analyzes user account and email activity data.
+The query ranks countries by the number of accounts created and emails sent, and selects the **top 10 countries** for each metric.
 
-## 📂 Структура репозиторію
-- `advanced_sql_account_email_analytics.sql` — основний SQL-запит  
-- `README.md` — документація (цей файл)    
-- `screenshots_query-results.png` — скріншоти з BigQuery  
+## 📂 Repository Structure
+- `advanced_sql_account_email_analytics.sql` — main SQL query
+- `README.md` — documentation (this file)
+- `screenshots_query-results.png` — query result screenshots from BigQuery
 
-## ⚙️ Логіка запиту
-1. **acc_info** — збір інформації по акаунтах (дата створення, країна, статус верифікації та підписки).  
-2. **email_info** — метрики по email (відправлення, відкриття, переходи).  
-   - `es.sent_date` зберігає **зсув у днях відносно дати сесії**.  
-3. **union_tab** — об’єднання даних акаунтів та email-метрик в одну таблицю.  
-4. **gr_date_country** — агрегація по даті, країні та атрибутах акаунтів.  
-5. **totals** — розрахунок загальної кількості акаунтів та email’ів у розрізі країни.  
-6. **sums** — обчислення **DENSE_RANK** для визначення ТОП-10 країн.  
-7. **Фінальний SELECT** — відбір країн, що входять у ТОП-10 за акаунтами або за email’ами.
+## ⚙️ Query Logic
+1. **acc_info** — collects account data (creation date, country, verification and subscription status).
+2. **email_info** — email metrics (sent, opened, clicked).
+   - `es.sent_date` stores the **offset in days relative to the session date**.
+3. **union_tab** — combines account data and email metrics into one table.
+4. **gr_date_country** — aggregation by date, country and account attributes.
+5. **totals** — calculates the total number of accounts and emails per country.
+6. **sums** — computes **DENSE_RANK** to identify the top 10 countries.
+7. **Final SELECT** — selects countries that are in the top 10 by accounts or by emails.
 
-## ▶️ Як запустити
-1. Відкрити [Google BigQuery Console](https://console.cloud.google.com/bigquery).  
-2. Створити новий запит.  
-3. Скопіювати вміст з `advanced_sql_account_email_analytics.sql`.  
-4. Запустити (`Run`).  
+## ▶️ How to Run
+1. Open the [Google BigQuery Console](https://console.cloud.google.com/bigquery).
+2. Create a new query.
+3. Copy the contents of `advanced_sql_account_email_analytics.sql`.
+4. Click `Run`.
 
-## 📊 Результат
-- Отримуємо таблицю з метриками акаунтів та email-активності.  
-- Країни відсортовані за датою та позицією у рейтингу.  
-- У результатах залишаються лише ті країни, які входять у **ТОП-10** хоча б за одним показником.
+## 📊 Result
+- A table with account and email activity metrics.
+- Countries sorted by date and ranking position.
+- Only countries that rank in the **top 10** for at least one metric are kept.
+
+![Query results](screenshots_query-results.png)
+
+---
+
+✍️ Author: Stanislav Tsapenko
+📅 Date: 09-09-2025
   
 ![Query results](screenshots_query-results.png)
 
